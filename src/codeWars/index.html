@@ -6,12 +6,71 @@
 </head>
 <body>
 <script>
- function splitString(str){
-        const arr = str.toLowerCase().split(' ')
-        return arr.map(el=>el.replace('!','').replace('-',''))
-    }
+    // Кто помнит свое время на школьном дворе, когда девочки брали цветок и рвали его лепестки, произнося каждую из следующих фраз каждый раз, когда отрывался лепесток:
+    //
+    //     "Я тебя люблю"
+    // "немного"
+    // "много"
+    // "страстно"
+    // "безумно"
+    // "нисколько"
+    // Если лепестков больше 6, вы начинаете сначала "I love you"для 7 лепестков, "a little"для 8 лепестков и так далее.
+    //
+    //     Когда был сорван последний лепесток, раздались крики волнения, мечты, нахлынувшие мысли и эмоции.
+    //
+    //     Ваша цель в этой ката - определить, какую фразу девушки сказали бы на последнем лепестке цветка с заданным количеством лепестков. Количество лепестков всегда больше 0.
 
-    console.log(splitString('React-not fully studied!'))
+    // function howMuchILoveYou(nbPetals) {
+    //        if(nbPetals%6 === 1){
+    //            return "I love you"
+    //        } if(nbPetals%6 === 2){
+    //            return "a little"
+    //        } if(nbPetals%6 === 3){
+    //            return "a lot"
+    //        } if(nbPetals%6 === 4){
+    //            return "passionately"
+    //        } if(nbPetals%6 === 5){
+    //            return "madly"
+    //        }if(nbPetals%6 === 6){
+    //            return "not at all"
+    //        }
+    // }
+    //
+    //             console.log(howMuchILoveYou(1))
+    //             console.log(howMuchILoveYou(7))
+    //             console.log(howMuchILoveYou(8))
+    //             console.log(howMuchILoveYou(9))
+    //             console.log(howMuchILoveYou(10))
+    //             console.log(howMuchILoveYou(13))
+    //             console.log(howMuchILoveYou(14))
+
+//=============================================================
+
+    // Задача
+    // Даны три целых числа a ,b,c, вернуть наибольшее число , полученное после вставки следующих операторов и скобок :+,*,()
+    // Другими словами, попробуйте каждую комбинацию a,b,c с [*+()] и верните максимальное полученное значение (подробнее об этом читайте в примечаниях)
+    // Пример
+    // С числами 1, 2 и 3 вот несколько способов размещения знаков и скобок :
+    //
+    //     1 * (2 + 3) = 5
+    // 1 * 2 * 3 = 6
+    // 1 + 2 * 3 = 7
+    // (1 + 2) * 3 = 9
+    // Таким образом , максимальное значение , которое вы можете получить, равно 9 .
+
+    // function expressionMatter(a, b, c) {
+    //    let x = a*(b+c)
+    //    let y = a*b*c
+    //    let z = a+b*c
+    //    let r = (a +b)*c
+    //    let e = a +b+c
+    //     return Math.max(x,y,z,r,e)
+    // }
+    //
+    // console.log(expressionMatter(2, 1, 2))
+    // console.log(expressionMatter(2, 10, 3))
+    // console.log(expressionMatter(1, 8, 1))
+//=====================================================================
 </script>
 </body>
 </html>
