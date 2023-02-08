@@ -9,6 +9,6 @@ export function multiply(a:number,b:number){
 }
 
 export function splitString(str:string){
-    const arr = str.toLowerCase().split(' ')
+    const arr = str.toLowerCase().replace(/-/g,' ').split(' ')
     return arr
 }

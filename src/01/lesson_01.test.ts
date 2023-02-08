@@ -30,14 +30,14 @@ test('should get the multiply of the numbers ',()=>{
 test('should get the split of the string ',()=>{
 
     const res1= splitString('Hello Word')
-    const res2= splitString('React-not fully studied!')
+    const res2= splitString('React-not fully studied')
 
     expect(res1[0]).toBe('hello')
     expect(res1[1]).toBe('word')
     expect(res2[0]).toBe('react')
-    expect(res2[0]).toBe('not')
-    expect(res2[0]).toBe('fully')
-    expect(res2[0]).toBe('studied')
+    expect(res2[1]).toBe('not')
+    expect(res2[2]).toBe('fully')
+    expect(res2[3]).toBe('studied')
     expect(res2.length).toBe(4)
 })
 
