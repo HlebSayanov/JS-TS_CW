@@ -44,7 +44,7 @@
     //             console.log(howMuchILoveYou(13))
     //             console.log(howMuchILoveYou(14))
 
-//=============================================================
+    //=============================================================
 
     // Задача
     // Даны три целых числа a ,b,c, вернуть наибольшее число , полученное после вставки следующих операторов и скобок :+,*,()
@@ -70,7 +70,7 @@
     // console.log(expressionMatter(2, 1, 2))
     // console.log(expressionMatter(2, 10, 3))
     // console.log(expressionMatter(1, 8, 1))
-//=====================================================================
+    //=====================================================================
 
     //=================================================================================================
 
@@ -169,10 +169,102 @@
     //     return birds.filter((el)=> el !== geese[0] && el !== geese[1] && el !== geese[2] && el !== geese[3] && el !== geese[4])
     //
     // };
-    //
+    //function gooseFilter (birds) {
+    //     var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    //     return birds.filter(b => !geese.includes(b));
+    // };
     // console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
 
+    //===========================================================================================
 
+    // Создайте функцию, которая принимает в качестве аргумента римскую цифру и возвращает ее значение в виде десятичного целого числа. Вам не нужно проверять форму римской цифры.
+    //
+    //     Современные римские цифры записываются путем выражения каждой десятичной цифры числа, которое нужно закодировать отдельно, начиная с самой левой цифры и пропуская любые 0. Таким образом, 1990 г. отображается как «MCMXC» (1000 = M, 900 = CM, 90 = XC), а 2008 г. отображается как «MMVIII» (2000 = MM, 8 = VIII). Римская цифра 1666 года, "MDCLXVI", использует каждую букву в порядке убывания.
+    //
+    //     Пример:
+    //
+    // solution('XXI'); // should return 21
+    // Помощь:
+    //
+    //     Symbol    Value
+    // I          1
+    // V          5
+    // X          10
+    // L          50
+    // C          100
+    // D          500
+    // M          1,000
+    // Предоставлено rosettacode.org
+
+    // function solution (roman) {
+    //
+    //     let obj ={
+    //         I:1,
+    //         V:5,
+    //         X:10,
+    //         L:50,
+    //         C:100,
+    //         D:500,
+    //         M:1000
+    //
+    //     }
+    //
+    //     const keys = Object.keys(obj);
+    //     let res = 0
+    //   for (let i = 0; i<roman.length; i++){
+    //       if(roman[i] === 'I'){
+    //           res +=1
+    //       } else if(roman[i] === 'V'){
+    //           res +=5
+    //       }else if(roman[i] === 'X'){
+    //           res +=10
+    //       }else if(roman[i] === 'L'){
+    //           res +=50
+    //       }else if(roman[i] === 'C'){
+    //           res +=100
+    //       }else if(roman[i] === 'D'){
+    //           res +=500
+    //       }else if(roman[i] === 'M'){
+    //           res +=1000
+    //       }else if (roman.indexOf()[i]===('IV')){
+    //           res+4
+    //       }
+    //   }
+    //
+    //     return res
+    // }
+    //
+    //
+    // console.log(solution('XXX'));
+    // console.log(solution('IV'));
+    // console.log(solution('I'));
+    // console.log(solution('MMVIII'));
+    //=========================================================================================
+
+    //
+    //     In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+    //
+    //         Examples
+    //     highAndLow("1 2 3 4 5");  // return "5 1"
+    //     highAndLow("1 2 -3 4 5"); // return "5 -3"
+    //     highAndLow("1 9 3 4 -5"); // return "9 -5"
+    //     Notes
+    //     All numbers are valid Int32, no need to validate them.
+    //         There will always be at least one number in the input string.
+    //         Output string must be two numbers separated by a single space, and highest number is first.
+
+    // function highAndLow(numbers) {
+    //     let a = numbers.split(' ').sort((a, b) => b - a)
+    //     let res = a[0] + ' ' + a[a.length - 1]
+    //
+    //     return res
+    //
+    // }
+    //
+    //
+    // console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+
+    //=======================================================================================
 </script>
 </body>
 </html>
