@@ -1,23 +1,23 @@
 import {Address} from "cluster";
 
-type StreetType = {
+export type StreetType = {
     title:string
 }
 
-type AddressType = {
+export type AddressType = {
     number:number
     street:StreetType
 }
 
-type HausesType = {
+export type HausesType = {
     buildedAt:number
     repaired:boolean
     address: AddressType
 }
-type AddressTypeForGover ={
+export type AddressTypeForGover ={
     street:StreetType
 }
-type GovernmentBuildings ={
+export type GovernmentBuildings ={
     type:"HOSPITAL" |"FIRE-STATION"
     budget:number
     staffCount:number

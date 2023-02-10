@@ -266,6 +266,49 @@
     // console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
 
     //=======================================================================================
+
+    //На каждую хорошую идею ката приходится немало плохих!
+    // В этом ката вам нужно проверить предоставленный массив (x) на наличие хороших идей «хорошо» и
+    // плохих идей «плохо». Если есть одна или две хорошие идеи, верните «Опубликовать!», если их больше 2,
+    //     верните «Чую серию!». Если нет хороших идей, как это часто бывает, верните «Fail!».
+
+    // 1 const well=(x) => x.includes('good') ? 'Publish!' : 'Fail'
+
+        //   2  function well(x){
+//         let str =[]
+// for (let i = 0; i<x.length; i++){
+//     if(x[i] === 'good' ){
+//         str.push('good')
+//     }
+// }
+// if (str.length > 2){
+//     return 'I smell a series!'
+// }else if (str.length){
+// return 'Publish!'
+// }else if (!str.length){
+//   return   'Fail!'
+// }
+//
+//     }
+
+    // 3 function well(x){
+    //     let count = 0;
+    //     for (let i = 0; i < x.length; i++) {
+    //         if (x[i] === 'good') {
+    //             count++;
+    //             if (count == 3)
+    //                 break;
+    //         }
+    //     }
+    //     return ['Fail!', 'Publish!', 'Publish!', 'I smell a series!'][count]
+    // }
+    //
+    //
+    // console.log(well(['bad', 'bad', 'bad']));
+    // console.log(well(['good', 'bad', 'bad', 'bad', 'good']));
+    // console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']));
+    // console.log(well(['good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'good']));
+    // console.log(well(["bad","bad","bad","bad","bad","good","bad","bad","bad","bad","good","bad"]));
 </script>
 </body>
 </html>
