@@ -274,22 +274,24 @@
 
     // 1 const well=(x) => x.includes('good') ? 'Publish!' : 'Fail'
 
-        //   2  function well(x){
-//         let str =[]
-// for (let i = 0; i<x.length; i++){
-//     if(x[i] === 'good' ){
-//         str.push('good')
-//     }
-// }
-// if (str.length > 2){
-//     return 'I smell a series!'
-// }else if (str.length){
-// return 'Publish!'
-// }else if (!str.length){
-//   return   'Fail!'
-// }
-//
-//     } d
+    // function well(x) {
+    //     let str = []
+    //     for (let i = 0; i < x.length; i++) {
+    //         if (x[i] === 'good') {
+    //             str.push('good')
+    //         }
+    //     }
+    //     if (str.length > 2) {
+    //         return 'I smell a series!'
+    //     } else if (str.length) {
+    //         return 'Publish!'
+    //     } else if (!str.length) {
+    //         return 'Fail!'
+    //     }
+    //
+    // }
+
+
 
     // 3 function well(x){
     //     let count = 0;
@@ -304,11 +306,36 @@
     // }
     //
     //
-    // console.log(well(['bad', 'bad', 'bad']));
+ // console.log(well(['bad', 'bad', 'bad']));
     // console.log(well(['good', 'bad', 'bad', 'bad', 'good']));
     // console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']));
     // console.log(well(['good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'good']));
-    // console.log(well(["bad","bad","bad","bad","bad","good","bad","bad","bad","bad","good","bad"]));
+ //    // console.log(well(["bad","bad","bad","bad","bad","good","bad","bad","bad","bad","good","bad"]));
+
+    //=============================================================================================
+
+    // В этом простом упражнении вы создадите программу, которая принимает значение ,
+    //     integer и возвращает список его кратных до другого значения, limit .
+    //     Если limitкратно integer, оно также должно быть включено.
+    //     В функцию всегда будут передаваться только положительные целые числа, не состоящие из 0.
+    // Предел всегда будет выше основания.
+    //
+    //     Например, если переданы параметры (2, 6), функция должна возвращать [2, 4, 6]значения 2, 4 и 6, кратные от 2 до 6.
+
+    // function findMultiples(integer, limit) {
+    //     let arr = []
+    //     for(let i = integer; i<=limit;i+=integer){
+    //              arr.push(i)
+    //
+    //         }
+    //     return arr
+    // }
+    // console.log(findMultiples(5, 25));   //[5, 10, 15, 20, 25]
+    // console.log(findMultiples(5, 7));
+//=====================================================================================================
+
+
+
 </script>
 </body>
 </html>
