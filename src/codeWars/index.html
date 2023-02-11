@@ -292,7 +292,6 @@
     // }
 
 
-
     // 3 function well(x){
     //     let count = 0;
     //     for (let i = 0; i < x.length; i++) {
@@ -306,11 +305,11 @@
     // }
     //
     //
- // console.log(well(['bad', 'bad', 'bad']));
+    // console.log(well(['bad', 'bad', 'bad']));
     // console.log(well(['good', 'bad', 'bad', 'bad', 'good']));
     // console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']));
     // console.log(well(['good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'good']));
- //    // console.log(well(["bad","bad","bad","bad","bad","good","bad","bad","bad","bad","good","bad"]));
+    //    // console.log(well(["bad","bad","bad","bad","bad","good","bad","bad","bad","bad","good","bad"]));
 
     //=============================================================================================
 
@@ -332,10 +331,99 @@
     // }
     // console.log(findMultiples(5, 25));   //[5, 10, 15, 20, 25]
     // console.log(findMultiples(5, 7));
-//=====================================================================================================
-rgresgsedsfsdf
+    //=====================================================================================================
 
+    //==============================================================================================
 
+    // Given a 2D ( nested ) list ( array, vector, .. ) of size m * n, your task is to find the sum of the minimum values in each row.
+    //
+    //     For Example:
+    //
+    //     [ [ 1, 2, 3, 4, 5 ]        #  minimum value of row is 1
+    //     , [ 5, 6, 7, 8, 9 ]        #  minimum value of row is 5
+    //     , [ 20, 21, 34, 56, 100 ]  #  minimum value of row is 20
+    // ]
+    // So the function should return 26 because the sum of the minimums is 1 + 5 + 20 = 26.
+    //
+    // Note: You will always be given a non-empty list containing positive values.
+    //
+    //     ENJOY CODING :)
+
+    // function sumOfMinimums(arr) {
+    //    let res = 0
+    //     arr.map(el=>{
+    //      res += el.sort((a,b)=>a-b).shift()
+    //    })
+    //     return res
+    // }
+    //
+    // console.log(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]));
+
+    //======================================================================================================
+
+    // Ваша задача состоит в том, чтобы создать функцию,
+    //     которая может принимать любое неотрицательное
+    // целое число в качестве аргумента и возвращать его с цифрами в порядке убывания.
+    //     По сути, переставьте цифры, чтобы получить максимально возможное число.
+    //
+    //     Примеры:
+    // Вход: 42145 Выход:54421
+    //
+    // Вход: 145263 Выход:654321
+    //
+    // Вход: 123456789 Выход:987654321
+    //
+    //
+
+    //
+    // function descendingOrder(n){
+    //
+    //     return Number(String(n).split('').sort((a,b)=>b-a).join('') )
+    // }
+    //
+    //
+    // console.log(descendingOrder(1021));
+
+    //===================================================================================
+
+    // Вам дадут слово. Ваша задача — вернуть средний символ слова. Если длина слова нечетная,
+    //     вернуть средний символ. Если длина слова четная, верните средние 2 символа.
+    //
+    //     #Примеры:
+    //
+    // Kata.getMiddle("test") should return "es"
+    //
+    // Kata.getMiddle("testing") should return "t"
+    //
+    // Kata.getMiddle("middle") should return "dd"
+    //
+    // Kata.getMiddle("A") should return "A"
+    // #Вход
+    //
+    // Слово (строка) длины 0 < str < 1000(в javascript вы можете получить чуть больше 1000 в некоторых
+    // тестовых примерах из-за ошибки в тестовых примерах). Вам не нужно тестировать для этого. Это только здесь,
+    //     чтобы сказать вам, что вам не нужно беспокоиться о тайм-ауте вашего решения.
+    //
+    //     #Выход
+    //
+    // Средний символ (символы) слова, представленного в виде строки.
+    //
+
+    // function getMiddle(s) {
+    //     // let arr = s.split(' ')
+    //     if(s.length % 2 === 0){
+    //         return s[s.length /2-1] +s[s.length /2]
+    //     }else {
+    //        return  s[Math.floor(s.length /2)]
+    //     }
+    //
+    // }
+    //
+    // console.log(getMiddle("test"));
+    // console.log(getMiddle("testing"));
+    // console.log(getMiddle("middle"));
+
+//==============================================================================================================
 </script>
 </body>
 </html>
