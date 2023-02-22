@@ -25,7 +25,7 @@ var riddle = {
     hints: ['это съедобное', 'это фрукт'],
     tries: 3,
     checkAnswer(str) {
-        if(this.tries<1) return alert('game over') && console.log('game over')
+        if(this.tries===0) return alert('restart page')
 
         if(this.correctAnswer === str.toLowerCase()){
                alert('you win')
@@ -36,14 +36,18 @@ var riddle = {
                console.log('you los')
                this.tries--
                console.log(this.tries)
+
            }
+        this.tries === 2 && alert(this.hints[0])
+        this.tries === 1 && alert(this.hints[1] )
+        this.tries===0 &&  alert('game over') && console.log('game over')
 
     },
 }
 
 window.onload = function() {
     document.getElementById('riddle').innerText = riddle.question;
-    // document.getElementById('tries').innerText = `Дается ${riddle.tries--} попыток`
+    document.getElementById('tries').innerText = riddle.tries--
 }
 
 function check() {
