@@ -678,16 +678,15 @@
     // Пожалуйста, напишите функцию, которая суммирует список, но игнорирует любые повторяющиеся элементы в списке.
     //     Например, для списка [3, 4, 3, 6] функция должна вернуть 10.
 
-    function sumNoDuplicates(numList) {
-       return numList.filter(function(item, pos) {
-            return numList.indexOf(item) == pos;
-        })
-    }
+    // function sumNoDuplicates(numList) {
+    //    return numList.filter(function(item, pos) {
+    //         return numList.indexOf(item) == pos;
+    //     })
+    // }
+    // console.log(sumNoDuplicates([1, 1, 2, 3]))
+    // console.log(sumNoDuplicates([1, 1, 2, 2, 3]))
 
-
-    console.log(sumNoDuplicates([1, 1, 2, 3]))
-    console.log(sumNoDuplicates([1, 1, 2, 2, 3]))
-
+    //======================================================================================================
 
     // Завершите функцию, которая принимает строковый параметр и переворачивает
     // каждое слово в строке. Все пробелы в строке должны быть сохранены.
@@ -696,22 +695,167 @@
     // "This is an example!" ==> "sihT si na !elpmaxe"
     // "double  spaces"      ==> "elbuod  secaps"
     //
+    //
+    // function reverseWords(str) {
+    //
+    //     return str.split('').reverse().join('').split(' ').reverse().join(' ')
+    // }
 
-    function reverseWords(str) {
+    // console.log(reverseWords('double  spaced  words'));
 
-        return str.split('').reverse().join('').split(' ').reverse().join(' ')
+    // const basicOp=(operation, value1, value2)=> {
+    // return eval(value1+operation+value2)
+    // }
+    //
+    //
+    //
+    // console.log(basicOp('+', 4, 786));
+
+//     const sorting = (a,b) => {
+//      if(a>b)  return 1
+//      if(a<b)  return -1
+//        return 0
+//     }
+//
+//     const food = ["Apple", "Melon", "Banana", "Yogurt", "Orange", "Stawberry"];
+//     food.sort(sorting)
+//     console.log(food)
+//
+//     const players = [
+//         {
+//             id: 1,
+//             name: 'Cristiano',
+//             surname: 'Ronaldo',
+//             club: 'Juventus',
+//         },
+//         {
+//             id: 2,
+//             name: 'Lionel',
+//             surname: 'Messi',
+//             club: 'Barcelona',
+//         },
+//         {
+//             id: 3,
+//             name: 'Karim',
+//             surname: 'Benzema',
+//             club: 'Real Madrid',
+//         },
+//         {
+//             id: 4,
+//             name: 'Maxi',
+//             surname: 'Gomez',
+//             club: 'Valencia',
+//         },
+//         {
+//             id: 5,
+//             name: 'Quincy',
+//             surname: 'Promes',
+//             club: 'Spartak',
+//         },
+//     ];
+// players.sort((a,b)=>sorting(a.surname,b.surname))
+//     console.log(players)
+
+
+//=================================================================================================================
+
+    //Практика по деструктуризации объекта
+    // Дан объект link. Используя деструктуризацию объекта, создайте
+    // новые переменные со значениями 'blank', 'link', 'anchor', 'Click me'.
+    // Имена переменных используйте согласно ключам (где необходимо, используйте переименование, создав переменную с именем renamed).
+
+        /*  const link = {
+        href: '#',
+        title: 'simple link',
+        target: 'blank',
+        className: 'link',
+        id: null,
+        children: {
+            span: {
+                content: 'Click me',
+                className: 'anchor',
+            },
+        },
     }
 
-    console.log(reverseWords('double  spaced  words'));
+    const {
+        target,
+        className,
+        children:{span:{
+            content,
+            className:renamed
+        }}
 
-    const basicOp=(operation, value1, value2)=> {
-    return eval(value1+operation+value2)
+    } = link
+
+    console.log(target,className,content,renamed)
+
+    */
+    /*
+    const players = [
+
+        {
+            id: 1,
+            name: 'Andres',
+            surname: 'Iniesta',
+            club: 'Vissel Cobe',
+        },
+        {
+            id: 2,
+            name: 'Eden',
+            surname: 'Hazard',
+            club: 'Real Madrid',
+        },
+        {
+            id: 3,
+            name: 'Mo',
+            surname: 'Salah',
+            club: 'Liverpool',
+        },
+        {
+            id: 4,
+            name: 'Lionel',
+            surname: 'Messi',
+            club: 'Barcelona',
+        },
+    ];
+
+    const jsonPlayers = JSON.stringify(players)
+    console.log(jsonPlayers)
+*/
+
+        /*  Первый входной массив — это ключ к правильным ответам на экзамене, например ["а", "а", "б", "г"].
+        Второй содержит представленные ответы студент
+        Два массива не пусты и имеют одинаковую длину. Возвращает оценку для этого массива ответов,
+        давая +4 за каждый правильный ответ, -1 за каждый неправильный ответ и +0 за каждый пустой ответ,
+        представленный в виде пустой строки (в C используется символ пробела).
+    Если оценка < 0, вернуть 0.
+
+    Например:
+
+        checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]) → 6
+    checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]) → 7
+    checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]) → 16
+    checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
+*/
+
+    function checkExam(array1, array2) {
+       let sum = 0
+        for(let i = 0; i<array1.length; i++){
+            if(array1[i]===array2[i]){
+                 sum+=4
+            } else {
+                sum +=-1
+            } if(array2[i]===""){
+                sum+=1
+            }
+        }
+        return sum < 0 ? 0 : sum
     }
 
-
-
-
-    console.log(basicOp('+', 4, 786));
+    console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"])); // 6
+    console.log((checkExam(["a", "a", "c", "b"], ["a", "a", "b", ""])));
+    console.log((checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"])));
 </script>
 </body>
 </html>
