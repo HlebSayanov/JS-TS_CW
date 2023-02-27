@@ -839,23 +839,51 @@
     checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
 */
 
-    function checkExam(array1, array2) {
-       let sum = 0
-        for(let i = 0; i<array1.length; i++){
-            if(array1[i]===array2[i]){
-                 sum+=4
-            } else {
-                sum +=-1
-            } if(array2[i]===""){
-                sum+=1
+    // function checkExam(array1, array2) {
+    //    let sum = 0
+    //     for(let i = 0; i<array1.length; i++){
+    //         if(array1[i]===array2[i]){
+    //              sum+=4
+    //         } else {
+    //             sum +=-1
+    //         } if(array2[i]===""){
+    //             sum+=1
+    //         }
+    //     }
+    //     return sum < 0 ? 0 : sum
+    // }
+    //
+    // console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"])); // 6
+    // console.log((checkExam(["a", "a", "c", "b"], ["a", "a", "b", ""])));
+    // console.log((checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"])));
+
+
+    // Count the number of divisors of a positive integer n.
+    //
+    //     Random tests go up to n = 500000.
+    //
+    // Examples (input --> output)
+    // 4 --> 3 (1, 2, 4)
+    // 5 --> 2 (1, 5)
+    // 12 --> 6 (1, 2, 3, 4, 6, 12)
+    // 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
+    // Note you should only return a number, the count of divisors.
+    //     The numbers between parentheses are shown only for you to see which numbers are counted in each case.
+
+    function getDivisorsCnt(n){
+       let x = []
+        for(let i = 0; i<n; i++){
+           let a = n % i
+            if(a==0){
+                x.push(i)
             }
         }
-        return sum < 0 ? 0 : sum
+        return x
     }
 
-    console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"])); // 6
-    console.log((checkExam(["a", "a", "c", "b"], ["a", "a", "b", ""])));
-    console.log((checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"])));
+
+    console.log(getDivisorsCnt(10));
+
 </script>
 </body>
 </html>
