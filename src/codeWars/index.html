@@ -897,18 +897,123 @@
     // Пример
     // Input:  1,3,5,6,7,8 Output: 1,2,3,4,5,6,7,8
 
-    function pipeFix(numbers){
-            const arr = []
-        for(let i = numbers[0]; i<=numbers[numbers.length-1];i++){
-            arr.push(i)
+        // function pipeFix(numbers){
+        //         const arr = []
+        //     for(let i = numbers[0]; i<=numbers[numbers.length-1];i++){
+        //         arr.push(i)
+        //     }
+        //     return arr
+        // }
+        //
+        // console.log(pipeFix([6, 9]));
+        // console.log(pipeFix([-1, 4]));
+
+//=========================================================================================================
+//
+//     Task:
+//         Given a list of integers, determine whether the sum of its elements is odd or even.
+//
+//         Give your answer as a string matching "odd" or "even".
+//
+//         If the input array is empty consider it as: [0] (array with a zero).
+//
+//     Examples:
+//         Input: [0]
+//     Output: "even"
+//
+//     Input: [0, 1, 4]
+//     Output: "odd"
+//
+//     Input: [0, -1, -5]
+//     Output: "even"
+//
+
+
+    // function oddOrEven(array) {
+    //     let sum = array.reduce((acc,summ)=> acc+summ,0 )
+    //
+    //     return Math.abs(sum) %2 ===1   ?  'odd' : 'even'
+    // }
+    //
+    // console.log(oddOrEven([0, 1, 2]));
+    // console.log(oddOrEven([1023, -1, 2]));
+    //  console.log(oddOrEven([]));
+    // console.log(oddOrEven([-1022]));
+    // console.log(oddOrEven([-1021]));
+
+
+
+    // Напишите функцию, которая принимает массив строк в качестве аргумента и возвращает
+    // отсортированный массив, содержащий те же строки,
+    // упорядоченные от самой короткой до самой длинной.
+    //     Например, если этот массив был передан в качестве аргумента:
+    //     ["Telescopes", "Glasses", "Eyes", "Monocles"]
+    // Ваша функция вернет следующий массив:
+    //     ["Eyes", "Glasses", "Monocles", "Telescopes"]
+    // Все строки в массиве, переданном вашей функции, будут иметь разную длину, поэтому вам не придется решать,
+    // как упорядочить несколько строк одинаковой длины.
+
+    // function sortByLength (array) {
+    //    const arr = array.sort((a,b)=>a.length - b.length)
+    //     return arr
+    // };
+    //
+    // console.log(sortByLength(["Beg", "Life", "I", "To"]));
+
+    //==============================================================================================================
+
+    // Вам даны два отсортированных массива, оба из которых содержат только целые числа.
+    //     Ваша задача — найти способ объединить их в один, отсортированный по возрастанию.
+    //     Завершите функцию mergeArrays(arr1, arr2), где arr1 и arr2 — исходные отсортированные массивы.
+    //
+    //     Вам не нужно беспокоиться о проверке, так как arr1 и arr2 должны быть массивами с 0 или более целыми числами.
+    //     Если и arr1, и arr2 пусты, просто верните пустой массив.
+    //
+    //     Примечание: arr1 и arr2 могут быть отсортированы в разном порядке.
+    //     Также arr1 и arr2 могут иметь одинаковые целые числа. Удалить дубликаты в возвращаемом результате.
+    //
+    // Примеры (ввод -> вывод)
+    // * [1, 2, 3, 4, 5], [6, 7, 8, 9, 10] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    //
+    // * [1, 3, 5, 7, 9], [10, 8, 6, 4, 2] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    //
+    // * [1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12] -> [1, 2, 3, 4, 5, 7, 9, 10, 1
+
+    // function mergeArrays(arr1, arr2) {
+    //     let x =arr1.concat(arr2)
+    //
+    //     return x.filter((el,i)=>x.indexOf(el) == i).sort((a,b)=>a-b)
+    // }
+    //
+    // console.log(mergeArrays([1, 3, 5, 7, 9], [10, 8, 6, 4, 2]));
+    // console.log(mergeArrays([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]));
+
+
+    async function getUsers(){
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+            const data = await response.json()
+            console.log(data);
+            throw new Error('WARNOBG')
+        }catch (error){
+                console.error(error.message)
         }
-        return arr
+
+    }
+    // getUsers()
+    // console.log(1)
+    // console.log(2)
+    // console.log(3)
+
+
+    async function getUsers1(){
+        //
+        // return Promise.resolve([{id:1, title:'asdas', isDone:false}])
+        return Promise.reject('asdasdasd')
+
     }
 
-    console.log(pipeFix([6, 9]));
-    console.log(pipeFix([-1, 4]));
-
-
+getUsers1().catch(console.error)
 </script>
 </body>
 </html>
