@@ -1295,26 +1295,26 @@ checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
     //     если параметр процента равен 2, вы должны преобразовать его в 0,02.
 
 
-   //  function nbYear(p0, percent, aug, p) {
-   //      const perc = percent / 100
-   //
-   //      let res
-   //      let y = p0
-   //      let count = 0
-   //
-   //      while (y<=p){
-   //          res = y + (y * perc) + aug
-   //            y = Math.floor(res)
-   //          count++
-   //      }
-   //      return count
-   //  }
-   //
-   //
-   //  console.log(nbYear(1000, 2, 50, 1200));
-   // console.log(nbYear(1500, 5, 100, 5000));
-   // console.log(nbYear(1500000, 2.5, 10000, 2000000));
-   //  console.log(nbYear(1500000, 0.25, 1000, 2000000));
+    //  function nbYear(p0, percent, aug, p) {
+    //      const perc = percent / 100
+    //
+    //      let res
+    //      let y = p0
+    //      let count = 0
+    //
+    //      while (y<=p){
+    //          res = y + (y * perc) + aug
+    //            y = Math.floor(res)
+    //          count++
+    //      }
+    //      return count
+    //  }
+    //
+    //
+    //  console.log(nbYear(1000, 2, 50, 1200));
+    // console.log(nbYear(1500, 5, 100, 5000));
+    // console.log(nbYear(1500000, 2.5, 10000, 2000000));
+    //  console.log(nbYear(1500000, 0.25, 1000, 2000000));
 
 
     //==============================================================================================================
@@ -1410,15 +1410,58 @@ checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
     // console.log(number(["a", "b", "c"]));
     //
 
-    function isIsogram(str){
-        str = str.toLowerCase()
-      return !str.split('').filter((el,i)=>str.indexOf(el)!== i).length
-        // return str.indexOf('a')
+    // function isIsogram(str){
+    //     str = str.toLowerCase()
+    //   return !str.split('').filter((el,i)=>str.indexOf(el)!== i).length
+    //     // return str.indexOf('a')
+    // }
+    //
+    // console.log(isIsogram("Dermatoglyphics"));
+    // console.log(isIsogram("isogram"));
+    // console.log(isIsogram("Aba"));
+
+
+    //==================================================================================================
+
+
+    //     function x(){
+    //      let b = 2
+    //        return  function f(b, a=b) {
+    //         console.log(a, b)
+    //     }
+    // }
+    //     let test = x()
+    //     test(undefined,2)
+    //     function fn(){
+    //         let b =2
+    //       return   function test(b, a=b){
+    //             console.log(a,let x
+
+    //     }
+    //     let test = fn()
+    //        test(undefined,3)
+
+
+    // test(undefined,2)
+    // console.log()
+
+
+    function findShort(s) {
+        let x = s.split(' ')
+        let min = x[0]
+
+        for (let i = 0; i < x.length; i++) {
+            if (x[i].length < min.length) {
+             min = x[i]
+            }
+        }
+
+        return min.length
     }
 
-    console.log(isIsogram("Dermatoglyphics"));
-    console.log(isIsogram("isogram"));
-    console.log(isIsogram("Aba"));
+    console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+
+
 </script>
 </body>
 </html>
