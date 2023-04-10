@@ -1446,22 +1446,81 @@ checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
     // console.log()
 
 
-    function findShort(s) {
-        let x = s.split(' ')
-        let min = x[0]
+    // function findShort(s) {
+    //     let x = s.split(' ')
+    //     let min = x[0]
+    //
+    //     for (let i = 0; i < x.length; i++) {
+    //         if (x[i].length < min.length) {
+    //          min = x[i]
+    //         }
+    //     }
+    //
+    //     return min.length
+    // }
+    //
+    // console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
 
-        for (let i = 0; i < x.length; i++) {
-            if (x[i].length < min.length) {
-             min = x[i]
+
+    //====================================================================
+
+    // Write a function that takes a string of parentheses, and determines if the order of the parentheses
+    // is valid. The function should return true if the string is valid, and false if it's invalid.
+    //
+    // Examples
+    // "()"              =>  true
+    // ")(()))"          =>  false
+    // "("               =>  false
+    // "(())((()())())"  =>  true
+    // Constraints
+
+    // function validParentheses(parenStr) {
+    //    const arr = parenStr.split('')
+    //     let count = 0
+    //     for(let i = 0 ; i<=arr.length; i++){
+    //
+    //         if(arr[0] ===')') count +=1
+    //         if(arr[i] === '('){
+    //             count +=1
+    //         }
+    //         if(arr[i+1] === ')' ) {
+    //             count -= 1
+    //         }
+    //         if(count < 0) {
+    //             break
+    //         }
+    //
+    //     }
+    //     return  !count
+    // }
+    //
+    // console.log(validParentheses('((()))'))
+    // console.log(validParentheses('()()()'))
+    // console.log(validParentheses('())(()')) // 1111111111111111
+    // console.log(validParentheses('((())'))
+    // console.log(validParentheses(')()'))
+    // console.log(validParentheses('(())(())()((())))()')) //false
+    // console.log(validParentheses(')')) //false
+
+
+    // =============================================================================================
+
+    function divisors(integer) {
+
+        let arr = []
+        let i = 2
+        while(i<integer){
+            if(integer % i == 0){
+                arr.push(i)
             }
+            i++
         }
-
-        return min.length
+        return !arr.length ? `${integer} is prime` : arr
     }
 
-    console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
-
-
+    console.log(divisors(15)); //[3, 5])
+    console.log(divisors(12));
+    console.log(divisors(13));
 </script>
 </body>
 </html>
