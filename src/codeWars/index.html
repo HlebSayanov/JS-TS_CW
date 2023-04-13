@@ -1505,22 +1505,44 @@ checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
 
     // =============================================================================================
 
-    function divisors(integer) {
+    // function divisors(integer) {
+    //
+    //     let arr = []
+    //     let i = 2
+    //     while(i<integer){
+    //         if(integer % i == 0){
+    //             arr.push(i)
+    //         }
+    //         i++
+    //     }
+    //     return !arr.length ? `${integer} is prime` : arr
+    // }
+    //
+    // console.log(divisors(15)); //[3, 5])
+    // console.log(divisors(12));
+    // console.log(divisors(13));
+    //
 
-        let arr = []
-        let i = 2
-        while(i<integer){
-            if(integer % i == 0){
-                arr.push(i)
+    // ===============================================
+
+    function smallEnough(a, limit) {
+        if(a.length === 1){
+            if(a[0] > limit){
+                return false
             }
-            i++
         }
-        return !arr.length ? `${integer} is prime` : arr
+        let  x = a.filter((el,i)=> el>limit).length <=1
+return x
     }
 
-    console.log(divisors(15)); //[3, 5])
-    console.log(divisors(12));
-    console.log(divisors(13));
+    console.log(smallEnough([66, 101], 200));
+    console.log(smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100));
+    console.log(smallEnough([101, 45, 75, 105, 99, 107], 107));
+    console.log(smallEnough([7, 0, 2, 0, 7], 7));
+    console.log(smallEnough([7, 0], 0));
+    console.log(smallEnough([9], 8));
+
+    console.log(smallEnough([6, 8, 5, 0, 4, 0], 4));
 </script>
 </body>
 </html>

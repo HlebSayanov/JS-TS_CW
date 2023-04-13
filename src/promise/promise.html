@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let axios = {
+    get(){
+   return new Promise((resolve, reject) => {
+          resolve({
+              age:18,
+              data:'08.12.22',
+              message:'Hello pony'
+          });
+      })
+    }
+  }
+
+
+axios.get()
+        .then(res=> new Promise(res => res('new Promise')) )
+        .then((res)=>console.log(res))
+        .then((res)=>console.log(res))
+  // .catch(err=>console.log(err))
+
+let x = new Promise((res, rej)=>{
+
+})
+  console.log(x.then(res=>res))
+</script>
+</body>
+</html>
